@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <ul>
+          {{#each products}}
+        <li></h3><img style="max-width:200px;"src="{{this.url}}"> ><a href="http://localhost:4000/item?id={{this._id}}">
+       </a>
+       <p>Name:{{this.name}}</p>
+               <p>Price:{{this.price}}</p>
+               <p>Stok:{{this.stok}}</p>
+               <p>Alınmak istenen adet:{{this.adet}}</p>
+    
+          </li> {{/each}} </ul>Total Price:{{total}}
+         
+       <form action="selled" method="POST">
+       <input type="submit" id="buton" value="Buy" class="btn float-right login_btn">
+    
+        </form>
+        {{#if loggedin}}
+        <a href="/">Log Out</a>
+        {{/if}}
+   
+</body>
+</html>

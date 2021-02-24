@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+             {{#each product}}
+    <img style="max-width:200px;"src="{{this.url}}"> 
+          
+               <p>Name:{{this.name}}</p>
+               <p>Price:{{this.price}}</p>
+               <p>Stok:{{this.stok}}</p>
+              {{/each }}
+
+            {{#if loggedin}}
+          <form action="addToBasket" method="POST">
+          <input type="text" id="text" name="many" placeholder="how many">
+       <input type="submit" id="buton" value="Add to card" class="btn float-right login_btn">
+    
+        </form>
+       
+        <a href="/">Log Out</a>
+      
+        {{/if}}
+        
+ 
+     <a href="/products">Go to product</a>
+    
+</body>
+</html>
